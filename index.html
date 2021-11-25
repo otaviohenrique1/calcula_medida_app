@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Calcula medida app</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="./css/app.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-3">
+        <div class="col-12">
+          <h1>Calcula medida app</h1>
+        </div>
+        <div class="col-12">
+          <hr class="border border-dark w-100">
+        </div>
+        <div class="col-12 row m-0 p-0">
+          <div class="col-12 mb-2">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" placeholder="Nome" class="form-control">
+          </div>
+          <div class="col-4">
+            <label for="campo_a">Campo A</label>
+            <input type="number" name="campo_a" id="campo_a" placeholder="Campo A" class="form-control" step="any">
+          </div>
+          <div class="col-4">
+            <label for="campo_b">Campo B</label>
+            <input type="number" name="campo_b" id="campo_b" placeholder="Campo B" class="form-control" step="any">
+          </div>
+          <div class="col-4">
+            <label for="campo_c">Campo C</label>
+            <input type="number" name="campo_c" id="campo_c" placeholder="Campo C" class="form-control" step="any">
+          </div>
+        </div>
+        <div class="col-12">
+          <hr class="border border-dark w-100">
+        </div>
+        <div class="col-12 text-center p-1 w-100">
+          <h3>Resultado:</h3>
+          <span id="resultado">0.0</span>
+        </div>
+        <div class="col-12">
+          <hr class="border border-dark w-100">
+        </div>
+        <div class="col-12 text-center p-1">
+          <button type="button" id="calcular" class="btn btn-primary">Calcular</button>
+          <button type="button" id="limpar" class="btn btn-danger">Limpar</button>
+          <button type="button" id="ajuda" class="btn btn-success">Ajuda</button>
+        </div>
+        <div class="col-12">
+          <hr class="border border-dark w-100">
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modal_ajuda" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Ajuda</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-12 row">
+                <div class="col-4">
+                  <h5 class="text-center">Campo A</h5>
+                </div>
+                <div class="col-4">
+                  <hr class="border border-dark w-100">
+                </div>
+                <div class="col-4">
+                  <h5 class="text-center">Campo B</h5>
+                </div>
+              </div>
+              <div class="col-12 row">
+                <div class="col-4">
+                  <h5 class="text-center">Campo C</h5>
+                </div>
+                <div class="col-4">
+                  <hr class="border border-dark w-100">
+                </div>
+                <div class="col-4">
+                  <h5 class="text-center">Resultado</h5>
+                </div>
+              </div>
+              <div class="col-12 row text-center mt-3">
+                <h5>Resultado = (Campo B x Campo C)/Campo A</h5>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./app.js"></script>
+    <script src="./renderer.js"></script>
+  </body>
+</html>

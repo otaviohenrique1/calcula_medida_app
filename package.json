@@ -1,0 +1,17 @@
+{
+  "name": "calcula_medida_app",
+  "version": "1.0.0",
+  "description": "calcula medida com regra de tres",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "otavio",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^16.0.1"
+  }
+}
