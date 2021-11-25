@@ -16,7 +16,7 @@ const ajuda = $('#ajuda');
   Resultado => Tiger -> 1 -> 1.68 -> 2
 */
 
-calcular.click(function(event) {
+calcular.click(function (event) {
   let valor_nome = nome.val();
   let valor_campo_a = campo_a.val();
   let valor_campo_b = campo_b.val();
@@ -34,11 +34,11 @@ calcular.click(function(event) {
 
   let resultado_calculo = calcula_medida(valor_campo_a, valor_campo_b, valor_campo_c);
   resultado.html(formatador_final(valor_nome, valor_campo_c, resultado_calculo));
-  
+
   campo_c.val('');
 });
 
-limpar.click(function(event) {
+limpar.click(function (event) {
   nome.val('');
   campo_a.val('');
   campo_b.val('');
@@ -46,7 +46,7 @@ limpar.click(function(event) {
   resultado.html('0.0');
 });
 
-ajuda.click(function(event) {
+ajuda.click(function (event) {
   $("#modal_ajuda").modal("show");
 });
 
@@ -63,10 +63,34 @@ function formatador_final(nome, valor_campo_c, resultado) {
   return formata_calculo(lista_valores);
 }
 
-// a-b
-// c-x
-// x = (b*c)/a
 
 function calcula_medida(campo_a, campo_b, campo_c) {
+  // a-b
+  // c-x
+  // x = (b*c)/a
   return (parseFloat(campo_b) * parseFloat(campo_c)) / parseFloat(campo_a);
+}
+
+function perimetro_circulo(valor) {
+  return (2 * Math.PI * valor);
+}
+
+function teorema_de_pitagoras({ hipotenusa, catetoA, catetoB }) {
+  let texto = '';
+  let resultado = 0;
+  let titulo = '';
+  if (hipotenusa === 0) {
+    titulo = 'Hipotenusa';
+    resultado = Math.sqrt((Math.pow(catetoA, 2) + Math.pow(catetoB, 2)));
+    texto = formata_calculo([titulo, resultado]);
+  } else if (catetoA === 0) {
+    titulo = 'Cateto A';
+    resultado = Math.sqrt((Math.pow(hipotenusa, 2) - Math.pow(catetoB, 2)))
+    texto = formata_calculo([titulo, resultado]);
+  } else if (catetoB === 0) {
+    titulo = 'Cateto B';
+    resultado = Math.sqrt((Math.pow(hipotenusa, 2) - Math.pow(catetoA, 2)))
+    texto = formata_calculo([titulo, resultado]);
+  }
+  return texto;
 }
