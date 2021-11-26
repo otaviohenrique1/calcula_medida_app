@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <title>Calcula medida app</title>
@@ -10,53 +9,88 @@
     <link rel="stylesheet" href="./css/app.css">
   </head>
   <body>
+    <ul class="nav nav-tabs mt-1" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="calcula-medida-tab" data-bs-toggle="tab" data-bs-target="#calcula_medida" type="button" role="tab" aria-controls="calcula_medida" aria-selected="true">Calcula medida</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="perimetro-circulo-tab" data-bs-toggle="tab" data-bs-target="#perimetro_circulo" type="button" role="tab" aria-controls="perimetro_circulo" aria-selected="false">Perimetro do circulo</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="teorema-pitagoras-tab" data-bs-toggle="tab" data-bs-target="#teorema_pitagoras" type="button" role="tab" aria-controls="teorema_pitagoras" aria-selected="false">Teorema de pitagoras</button>
+      </li>
+    </ul>
     <div class="container">
-      <div class="row mt-3">
-        <div class="col-12">
-          <h1>Calcula medida app</h1>
-        </div>
-        <div class="col-12">
-          <hr class="border border-dark w-100">
-        </div>
-        <div class="col-12 row m-0 p-0">
-          <div class="col-12 mb-2">
-            <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome" placeholder="Nome" class="form-control">
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="calcula_medida" role="tabpanel" aria-labelledby="calcula-medida-tab">
+          <div class="row mt-3">
+            <div class="col-12">
+              <h1>Calcula medida</h1>
+            </div>
+            <div class="col-12">
+              <hr class="border border-dark w-100">
+            </div>
+            <div class="col-12 row m-0 p-0">
+              <div class="col-12 mb-2">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" placeholder="Nome" class="form-control">
+              </div>
+              <div class="col-4">
+                <label for="campo_a">Campo A</label>
+                <input type="number" name="campo_a" id="campo_a" placeholder="Campo A" class="form-control" step="any">
+              </div>
+              <div class="col-4">
+                <label for="campo_b">Campo B</label>
+                <input type="number" name="campo_b" id="campo_b" placeholder="Campo B" class="form-control" step="any">
+              </div>
+              <div class="col-4">
+                <label for="campo_c">Campo C</label>
+                <input type="number" name="campo_c" id="campo_c" placeholder="Campo C" class="form-control" step="any">
+              </div>
+            </div>
+            <div class="col-12">
+              <hr class="border border-dark w-100">
+            </div>
+            <div class="col-12 text-center p-1 w-100">
+              <h3>Resultado:</h3>
+              <span id="resultado">0.0</span>
+            </div>
+            <div class="col-12">
+              <hr class="border border-dark w-100">
+            </div>
+            <div class="col-12 text-center p-1">
+              <button type="button" id="calcular" class="btn btn-primary">Calcular</button>
+              <button type="button" id="limpar" class="btn btn-danger">Limpar</button>
+              <button type="button" id="ajuda-calcula-medida" class="btn btn-success">Ajuda</button>
+            </div>
+            <div class="col-12">
+              <hr class="border border-dark w-100">
+            </div>
           </div>
-          <div class="col-4">
-            <label for="campo_a">Campo A</label>
-            <input type="number" name="campo_a" id="campo_a" placeholder="Campo A" class="form-control" step="any">
-          </div>
-          <div class="col-4">
-            <label for="campo_b">Campo B</label>
-            <input type="number" name="campo_b" id="campo_b" placeholder="Campo B" class="form-control" step="any">
-          </div>
-          <div class="col-4">
-            <label for="campo_c">Campo C</label>
-            <input type="number" name="campo_c" id="campo_c" placeholder="Campo C" class="form-control" step="any">
+        </div>
+        <div class="tab-pane fade" id="perimetro_circulo" role="tabpanel" aria-labelledby="perimetro-circulo-tab">
+          <div class="row mt-3">
+            <div class="col-12">
+              <h1>Perimetro do circulo</h1>
+            </div>
+            <div class="col-12">
+              <hr class="border border-dark w-100">
+            </div>
           </div>
         </div>
-        <div class="col-12">
-          <hr class="border border-dark w-100">
-        </div>
-        <div class="col-12 text-center p-1 w-100">
-          <h3>Resultado:</h3>
-          <span id="resultado">0.0</span>
-        </div>
-        <div class="col-12">
-          <hr class="border border-dark w-100">
-        </div>
-        <div class="col-12 text-center p-1">
-          <button type="button" id="calcular" class="btn btn-primary">Calcular</button>
-          <button type="button" id="limpar" class="btn btn-danger">Limpar</button>
-          <button type="button" id="ajuda" class="btn btn-success">Ajuda</button>
-        </div>
-        <div class="col-12">
-          <hr class="border border-dark w-100">
+        <div class="tab-pane fade" id="teorema_pitagoras" role="tabpanel" aria-labelledby="teorema-pitagoras-tab">
+          <div class="row mt-3">
+            <div class="col-12">
+              <h1>Teorema de pitagoras</h1>
+            </div>
+            <div class="col-12">
+              <hr class="border border-dark w-100">
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="modal" id="modal_ajuda" tabindex="-1">
+    <div class="modal" id="modal_ajuda_calcula_medida" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">

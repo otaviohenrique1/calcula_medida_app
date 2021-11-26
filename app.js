@@ -5,7 +5,7 @@ const campo_c = $('#campo_c');
 const resultado = $('#resultado');
 const calcular = $('#calcular');
 const limpar = $('#limpar');
-const ajuda = $('#ajuda');
+const ajuda_calcula_medida = $('#ajuda-calcula-medida');
 
 /*
   --Exemplo--
@@ -46,8 +46,8 @@ limpar.click(function (event) {
   resultado.html('0.0');
 });
 
-ajuda.click(function (event) {
-  $("#modal_ajuda").modal("show");
+ajuda_calcula_medida.click(function (event) {
+  $("#modal_ajuda_calcula_medida").modal("show");
 });
 
 function formata_calculo(lista_valores) {
@@ -62,7 +62,6 @@ function formatador_final(nome, valor_campo_c, resultado) {
   lista_valores[3] = Math.round(resultado).toFixed(2);
   return formata_calculo(lista_valores);
 }
-
 
 function calcula_medida(campo_a, campo_b, campo_c) {
   // a-b
