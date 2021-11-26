@@ -51,17 +51,17 @@
             <div class="col-12">
               <hr class="border border-dark w-100">
             </div>
-            <div class="col-12 text-center p-1 w-100">
-              <h3>Resultado:</h3>
-              <span id="resultado">0.0</span>
-            </div>
-            <div class="col-12">
-              <hr class="border border-dark w-100">
-            </div>
             <div class="col-12 text-center p-1">
               <button type="button" id="calcular" class="btn btn-primary">Calcular</button>
               <button type="button" id="limpar" class="btn btn-danger">Limpar</button>
               <button type="button" id="ajuda-calcula-medida" class="btn btn-success">Ajuda</button>
+            </div>
+            <div class="col-12">
+              <hr class="border border-dark w-100">
+            </div>
+            <div class="col-12 text-center p-1 w-100">
+              <h3>Resultado:</h3>
+              <span id="resultado">0.0</span>
             </div>
             <div class="col-12">
               <hr class="border border-dark w-100">
@@ -76,12 +76,63 @@
             <div class="col-12">
               <hr class="border border-dark w-100">
             </div>
+            <form class="row" id="formulario_perimetro_circulo">
+              <div class="col-12">
+                <label for="raio">Valor do raio</label>
+                <input type="number" name="raio" id="raio" placeholder="Raio" class="form-control" step="any">
+              </div>
+              <div class="col-12">
+                <hr class="border border-dark w-100">
+              </div>
+              <div class="col-12 text-center p-1">
+                <button type="submit" class="btn btn-primary">Calcular</button>
+                  <button type="button" id="limpar_perimetro_circulo" class="btn btn-danger">Limpar</button>
+              </div>
+            </form>
+            <div class="col-12">
+              <hr class="border border-dark w-100">
+            </div>
+            <div class="col-12 text-center p-1 w-100">
+              <h3>Resultado:</h3>
+              <span id="resultado_perimetro_circulo">0.0</span>
+            </div>
+            <div class="col-12">
+              <hr class="border border-dark w-100">
+            </div>
           </div>
         </div>
         <div class="tab-pane fade" id="teorema_pitagoras" role="tabpanel" aria-labelledby="teorema-pitagoras-tab">
           <div class="row mt-3">
             <div class="col-12">
               <h1>Teorema de pitagoras</h1>
+            </div>
+            <form class="row" id="formulario_teorema_de_pitagoras">
+              <div class="col-4">
+                <label for="cateto_1">Cateto 1</label>
+                <input type="number" name="cateto_1" id="cateto_1" placeholder="Cateto 1" class="form-control" step="any">
+              </div>
+              <div class="col-4">
+                <label for="cateto_2">Cateto 2</label>
+                <input type="number" name="cateto_2" id="cateto_2" placeholder="Cateto 2" class="form-control" step="any">
+              </div>
+              <div class="col-4">
+                <label for="hipotenusa">Hipotenusa</label>
+                <input type="number" name="hipotenusa" id="hipotenusa" placeholder="Hipotenusa" class="form-control" step="any">
+              </div>
+              <div class="col-12">
+                <hr class="border border-dark w-100">
+              </div>
+              <div class="col-12 text-center p-1">
+                <button type="submit" class="btn btn-primary">Calcular</button>
+                <button type="button" id="limpar_teorema_de_pitagoras" class="btn btn-danger">Limpar</button>
+              </div>
+            </form>
+            <div class="col-12">
+              <hr class="border border-dark w-100">
+            </div>
+            <div class="col-12 text-center p-1 w-100">
+              <h3>Resultado:</h3>
+              <span id="resultado_teorema_de_pitagoras">0.0</span>
             </div>
             <div class="col-12">
               <hr class="border border-dark w-100">
