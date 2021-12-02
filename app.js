@@ -76,6 +76,7 @@ const raio = $('#raio');
 const resultado_perimetro_circulo = $('#resultado_perimetro_circulo');
 const formulario_perimetro_circulo = $('#formulario_perimetro_circulo');
 const limpar_perimetro_circulo = $('#limpar_perimetro_circulo');
+const ajuda_perimetro_circulo = $('#ajuda-perimetro-circulo');
 
 formulario_perimetro_circulo.submit(function(event) {
   event.preventDefault();
@@ -89,6 +90,10 @@ limpar_perimetro_circulo.click(function(event) {
   resultado_perimetro_circulo.html('0.0');
 });
 
+ajuda_perimetro_circulo.click(function(event) {
+  $("#modal_ajuda_perimetro_circulo").modal("show");
+});
+
 function perimetro_circulo(valor) {
   return (2 * Math.PI * valor);
 }
@@ -100,6 +105,7 @@ const hipotenusa = $('#hipotenusa');
 const resultado_teorema_de_pitagoras = $('#resultado_teorema_de_pitagoras');
 const formulario_teorema_de_pitagoras = $('#formulario_teorema_de_pitagoras');
 const limpar_teorema_de_pitagoras = $('#limpar_teorema_de_pitagoras');
+const ajuda_teorema_pitagoras = $('#ajuda-teorema-pitagoras');
 
 formulario_teorema_de_pitagoras.submit(function(event) {
   event.preventDefault();
@@ -122,6 +128,10 @@ limpar_teorema_de_pitagoras.click(function(event) {
   cateto_2.val('');
   hipotenusa.val('');
   resultado_teorema_de_pitagoras.html('0.0');
+});
+
+ajuda_teorema_pitagoras.click(function(event) {
+  $("#modal_ajuda_teorema_pitagoras").modal("show");
 });
 
 function teorema_de_pitagoras({ hipotenusa, catetoA, catetoB }) {

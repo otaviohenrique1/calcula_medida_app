@@ -87,6 +87,7 @@
               <div class="col-12 text-center p-1">
                 <button type="submit" class="btn btn-primary">Calcular</button>
                   <button type="button" id="limpar_perimetro_circulo" class="btn btn-danger">Limpar</button>
+                  <button type="button" id="ajuda-perimetro-circulo" class="btn btn-success">Ajuda</button>
               </div>
             </form>
             <div class="col-12">
@@ -125,6 +126,7 @@
               <div class="col-12 text-center p-1">
                 <button type="submit" class="btn btn-primary">Calcular</button>
                 <button type="button" id="limpar_teorema_de_pitagoras" class="btn btn-danger">Limpar</button>
+                <button type="button" id="ajuda-teorema-pitagoras" class="btn btn-success">Ajuda</button>
               </div>
             </form>
             <div class="col-12">
@@ -182,6 +184,51 @@
         </div>
       </div>
     </div>
+    <div class="modal" id="modal_ajuda_perimetro_circulo" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Ajuda</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-12 row text-center mt-3">
+                <h5>pi = 3,1415...</h5>
+              </div>
+              <div class="col-12 row text-center mt-3">
+                <h5>Raio = Diametro/2</h5>
+              </div>
+              <div class="col-12 row text-center mt-3">
+                <h5>Resultado = 2 x pi x Raio</h5>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modal_ajuda_teorema_pitagoras" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Ajuda</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-12 row text-center mt-3">
+                <h5>Hipotenusa² = CatetoA² + CatetoB²</h5>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1 id="titulo_teste"></h1>
     <script src="./js/jquery-3.6.0.js"></script>
     <script src="./js/bootstrap.js"></script>
     <script src="./js/bootstrap.bundle.js"></script>
